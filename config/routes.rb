@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/hello', to: 'static_pages#helloworld'
 
   get    '/login',   to: 'sessions#new'
+  get    '/signup',   to: 'users#signup'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
