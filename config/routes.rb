@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'blogposts/new'
+
+  get 'blogposts/create'
+
   resources :users
   root 'static_pages#home'
   get '/contact-us', to: 'static_pages#contact'
