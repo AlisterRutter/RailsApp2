@@ -28,3 +28,17 @@ module SessionsHelper
     end
   end
 end
+
+def is_logged_in
+  if !logged_in?
+    flash[:notice] = "You must be logged in to access this path"
+    redirect_to root_path
+  end
+end
+end
+
+def correct_user
+@user = User.find(params[:id])
+    redirect_to(root_path) unless @user = current_user
+end
+end
